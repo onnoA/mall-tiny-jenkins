@@ -1,0 +1,14 @@
+version: '3.1'
+services:
+  mall-tiny-jenkins:
+    image: 192.168.118.134:5000/mall-tiny-jenkins:v1.0.0
+    container_name: mall-tiny-jenkins
+    ports:
+      - 8088:8088
+      - 22222:22222
+      - 20881:20881
+
+networks:
+  default:
+    external:
+      name: dubbo
