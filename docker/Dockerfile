@@ -10,7 +10,7 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
 RUN mkdir /app
 
 COPY mall-tiny-jenkins-$APP_VERSION.jar /app/app.jar
-ENTRYPOINT ["dockerize", "-timeout", "5m", "-wait", "tcp://192.168.118.134:3306", "java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/app/app.jar"]
+ENTRYPOINT ["dockerize", "-timeout", "5m", "-wait", "tcp://47.112.215.170:3306", "java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/app/app.jar"]
 
 EXPOSE 8501 22222 20881
 
